@@ -48,9 +48,15 @@
                 <h6 class="text-center">made by faysal khan</h6>
                 <div class="search-box my-5">
                     <input id="search-field" type="text" class="form-control" placeholder="Enter your artist song name">
-                    <button onclick="searchSong()" class="btn btn-success search-btn">Search</button>
+                    <button id="search-button" onclick="searchSong()" class="btn btn-success search-btn">Search</button>
                 </div>
             </div>
+            <!-- spinner -->
+            <div id="loading-spinner" class="d-flex justify-content-center  ">
+                <div class="spinner-border text-primary d-none" role="status">
+                    <span class="visually-hidden"></span>
+                  </div> 
+            </div>  
             <!-- Single Lyrics -->
             <h3 id="error-message" class="text-danger"></h3>
             <div id="song-lyrics" class="single-lyrics text-center">

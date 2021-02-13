@@ -7,10 +7,17 @@
     const data = await res.json()
     displaySongs(data.data)
 } */
+//enter key function activities
+ document.getElementById("search-field").addEventListener("keypress", function(event) {
+     if (event.keyCode == 13){
+        document.getElementById("search-button").click();
+     }
+});
 // directly fetch use with then
  const searchSong = () =>{
     const searchText = document.getElementById('search-field').value;
     const url = `https://api.lyrics.ovh/suggest/${searchText}`
+    // toggleSpinner();
     // load data
     fetch(url)
    .then(res => res.json())
@@ -81,3 +88,9 @@ const displayLyrics = lyrics =>{
     const errorTag = document.getElementById('error-message');
     errorTag.innerText = error;
 } */
+
+// toggle spinner
+const toggleSpinner = () => {
+    const spinner = document.getElementById('loading-spinner');
+    // spinner.classList.remove('d-none');
+}
